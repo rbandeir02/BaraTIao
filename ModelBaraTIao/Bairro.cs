@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ModelBaraTIao
 {
-    class Bairro
+    [Table("Bairros", Schema = "BaraTIao")]
+    public class Bairro
     {
-
+        [Key]
         public int Id { get; set; }
 
-        public int Descricao { get; set; }
+        [Required(ErrorMessage ="Por favor, insira o nome do bairro.")]
+        [MaxLength(100)]
+        [DisplayName("Bairro")]
+        public string Descricao { get; set; }
 
     }
 }
