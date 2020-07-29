@@ -2,14 +2,16 @@
 using BaraTIao.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BaraTIao.Migrations
 {
     [DbContext(typeof(BaratiaoContext))]
-    partial class BaratiaoContextModelSnapshot : ModelSnapshot
+    [Migration("20200727185303_VersaoInicial")]
+    partial class VersaoInicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

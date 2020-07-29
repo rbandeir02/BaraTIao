@@ -15,6 +15,8 @@ namespace BaraTIao.Data
         }
 
         public DbSet<Bairro> Bairros { get; set; }
+
+        public DbSet<Loja> Lojas { get; set; }
         //public DbSet<Bakery> Bakeries { get; set; }
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
